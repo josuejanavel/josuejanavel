@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Josué Janavel — Diseñador Gráfico</title>
+
+    <meta name="description" content="Portfolio de Josué Janavel, diseñador gráfico especializado en branding, identidad visual, diseño web y comunicación.">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.4;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* ========================================
+           CONTENEDOR GENERAL
+        ======================================== */
+
+        .container {
+            width: calc(100% - 40px);
+            max-width: 1840px;
+            margin: 0 auto;
+        }
+
+
+        /* ========================================
+           HEADER
+        ======================================== */
+
+        header {
+            padding: 25px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        nav {
+    display: flex;
+    gap: 40px;
+    font-size: 14px;
+    margin-right: 12%;
+}
+
+        nav a {
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-name {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 42px;
+}
+
+       .hero-content {
+    max-width: 900px;
+    margin-left: 12%;
+}
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 110px);
+            font-weight: 500;
+            letter-spacing: -5px;
+            line-height: 0.95;
+            margin-bottom: 35px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 2vw, 30px);
+            letter-spacing: -0.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            font-size: 17px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        .hero-link {
+            display: inline-block;
+            margin-top: 45px;
+            font-size: 15px;
+            border-bottom: 1px solid #111111;
+            padding-bottom: 4px;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-link:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ========================================
+           SECCIÓN PROYECTOS
+        ======================================== */
+
+        .projects-section {
+            padding: 100px 0 160px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 45px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 15px;
+            row-gap: 90px;
+        }
+
+
+        /* ========================================
+           PROYECTO
+        ======================================== */
+
+        .project {
+            display: block;
+        }
+
+        .project-image {
+            overflow: hidden;
+            background: #eeeeee;
+            aspect-ratio: 4 / 3;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(.2,.6,.2,1);
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.035);
+        }
+
+        .project-info {
+            padding-top: 14px;
+        }
+
+        .project-title {
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.4;
+            max-width: 500px;
+        }
+
+
+        /* ========================================
+           SOBRE MÍ
+        ======================================== */
+
+        .about-section {
+            border-top: 1px solid #dddddd;
+            padding: 130px 0;
+        }
+
+       .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    margin-left: 12%;
+}
+
+        .about-label {
+            font-size: 14px;
+            color: #666666;
+        }
+
+       .about-text {
+    max-width: 850px;
+    transform: translateX(-100px);
+}
+
+        .about-text p {
+            font-size: clamp(25px, 3vw, 42px);
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+        }
+
+
+        /* ========================================
+           CONTACTO
+        ======================================== */
+
+        .contact-section {
+    border-top: 1px solid #dddddd;
+    padding: 130px 0;
+}
+
+.contact-section .container {
+    margin-left: 12%;
+}
+
+        .contact-title {
+            font-size: clamp(45px, 7vw, 100px);
+            font-weight: 500;
+            letter-spacing: -4px;
+            line-height: 1;
+            margin-bottom: 50px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 16px;
+        }
+
+        .contact-links a {
+            border-bottom: 1px solid #111111;
+            padding-bottom: 3px;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            border-top: 1px solid #dddddd;
+            padding: 30px 0;
+            font-size: 13px;
+            color: #666666;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media (max-width: 900px) {
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 70px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-content {
+    margin-left: 0;
+
+        }
+
+
+        /* ========================================
+           CELULAR
+        ======================================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 30px);
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            nav {
+                gap: 15px;
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+                letter-spacing: -3px;
+            }
+
+            .hero-subtitle {
+                font-size: 21px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .projects-section {
+                padding: 80px 0 110px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                row-gap: 65px;
+            }
+
+            .project-image {
+                aspect-ratio: 4 / 3;
+            }
+
+            .project-title {
+                font-size: 17px;
+            }
+
+            .project-description {
+                font-size: 15px;
+            }
+
+            .about-section,
+            .contact-section {
+                padding: 90px 0;
+            }
+
+            .about-text p {
+                font-size: 28px;
+            }
+            .about-text {
+    transform: translateX(0);
+}
+
+            .contact-title {
+                font-size: 55px;
+                letter-spacing: -3px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .about-grid {
+    margin-left: 0;
+}
+
+.contact-section .container {
+    margin-left: auto;
+}
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+<header>
+
+    <div class="container">
+
+        <div class="header-inner">
+
+            <nav>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+    <!-- ========================================
+         HERO
+    ========================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+    <div class="hero-name">
+        JOSUÉ JANAVEL
+    </div>
+
+    <h1>
+        Diseñador<br>
+        Gráfico.
+    </h1>
+
+                    <p class="hero-subtitle">
+                        Branding · Identidad Visual · Diseño Web · Social Media
+                    </p>
+
+                    <p class="hero-description">
+                        Con más de 14 años de experiencia desarrollando marcas,
+                        sistemas visuales y proyectos de comunicación para
+                        empresas, instituciones y emprendimientos.
+                    </p>
+
+                    <a href="#proyectos" class="hero-link">
+                        Ver proyectos ↓
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             PROYECTOS
+        ========================================= -->
+
+        <section id="proyectos" class="projects-section">
+
+            <div class="container">
+
+                <p class="section-title">
+                    Proyectos seleccionados
+                </p>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- SODA D'ANNA -->
+
+                    <a href="proyectos/soda-danna.html" class="project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="img/soda-danna.jpg"
+                                alt="Soda D'Anna — Rediseño de marca"
+                            >
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h2 class="project-title">
+                                Soda D'Anna
+                            </h2>
+
+                            <p class="project-description">
+                                Rediseño integral de identidad visual, sistema de marca y etiquetas para una empresa de bebidas.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- GENUINA -->
+
+                    <a href="proyectos/genuina.html" class="project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="img/genuina.jpg"
+                                alt="Genuina — Identidad visual y packaging"
+                            >
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h2 class="project-title">
+                                Genuina
+                            </h2>
+
+                            <p class="project-description">
+                                Desarrollo de identidad visual y packaging para una línea de cosmética natural.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- UISJ -->
+
+                    <a href="proyectos/uisj.html" class="project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="img/uisj.jpg"
+                                alt="UISJ — Rediseño de identidad institucional"
+                            >
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h2 class="project-title">
+                                UISJ
+                            </h2>
+
+                            <p class="project-description">
+                                Rediseño de identidad institucional y creación de un sistema gráfico unificado.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- MEDALLA DORADA -->
+
+                    <a href="proyectos/medalla-dorada.html" class="project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="img/medalla-dorada.jpg"
+                                alt="Medalla Dorada — Branding y etiquetas"
+                            >
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h2 class="project-title">
+                                Medalla Dorada
+                            </h2>
+
+                            <p class="project-description">
+                                Branding y diseño de etiquetas para una cerveza artesanal de San Juan.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ALUA -->
+
+                    <a href="proyectos/alua.html" class="project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="img/alua.jpg"
+                                alt="Alua — Identidad visual"
+                            >
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h2 class="project-title">
+                                Alua
+                            </h2>
+
+                            <p class="project-description">
+                                Creación de identidad visual para una empresa dedicada a la gestión de alojamientos.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- STRASSE -->
+
+                    <a href="proyectos/strasse.html" class="project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="img/strasse.jpg"
+                                alt="Strasse — Tipografía original"
+                            >
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <h2 class="project-title">
+                                Strasse
+                            </h2>
+
+                            <p class="project-description">
+                                Diseño y desarrollo de una tipografía original basada en principios geométricos contemporáneos.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             SOBRE MÍ
+        ========================================= -->
+
+        <section id="sobre-mi" class="about-section">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-label">
+                        Sobre mí
+                    </div>
+
+                    <div class="about-text">
+
+                        <p>
+                            Soy Josué, diseñador gráfico especializado
+                            en identidad visual, branding y comunicación.
+                            Trabajo desarrollando marcas y sistemas visuales
+                            que buscan resolver problemas de comunicación
+                            de manera clara y efectiva.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             CONTACTO
+        ========================================= -->
+
+        <section id="contacto" class="contact-section">
+
+            <div class="container">
+
+                <h2 class="contact-title">
+                    Trabajemos<br>
+                    juntos.
+                </h2>
+
+                <div class="contact-links">
+
+                    <a href="mailto:josuejanavel@gmail.com">
+                        Email
+                    </a>
+
+                    <a href="https://www.instagram.com/josue.janavel/" target="_blank">
+                        Instagram
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/josue-janavel/" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://wa.me/5492646270818" target="_blank">
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <span>
+                    Josué Janavel
+                </span>
+
+                <span>
+                    Diseñador Gráfico · San Juan, Argentina
+                </span>
+
+                <span>
+                    © 2026
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

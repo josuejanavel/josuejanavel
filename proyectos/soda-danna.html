@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soda D'Anna — Josué Janavel</title>
+
+    <meta
+        name="description"
+        content="Soda D'Anna — Rediseño de identidad visual, branding y packaging por Josué Janavel."
+    >
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.4;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* ========================================
+           CONTENEDOR GENERAL
+        ======================================== */
+
+        .container {
+            width: calc(100% - 40px);
+            max-width: 1840px;
+            margin: 0 auto;
+        }
+
+
+        /* ========================================
+           HEADER
+        ======================================== */
+
+        header {
+            padding: 25px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            font-size: 14px;
+            margin-right: 12%;
+        }
+
+        nav a {
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ========================================
+           PROYECTO — INTRODUCCIÓN
+        ======================================== */
+
+        .project-intro {
+            padding: 110px 0 100px;
+        }
+
+        .project-intro-inner {
+            margin-left: 12%;
+            max-width: 900px;
+        }
+
+        .project-number {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 55px;
+        }
+
+        .project-title {
+            font-size: clamp(55px, 8vw, 120px);
+            font-weight: 500;
+            letter-spacing: -6px;
+            line-height: 0.9;
+            margin-bottom: 35px;
+        }
+
+        .project-category {
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            margin-bottom: 28px;
+        }
+
+        .project-description {
+            max-width: 650px;
+            font-size: 17px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+
+        /* ========================================
+           IMAGEN PRINCIPAL
+        ======================================== */
+
+        .project-hero {
+            margin-bottom: 130px;
+        }
+
+        .project-hero-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #eeeeee;
+        }
+
+        .project-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* ========================================
+           TEXTO DEL PROYECTO
+        ======================================== */
+
+        .project-text {
+            margin-left: 12%;
+            max-width: 850px;
+            margin-bottom: 120px;
+        }
+
+        .project-text-label {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+
+        .project-text p {
+    font-size: clamp(21px, 2.2vw, 30px);
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+        }
+
+
+        /* ========================================
+           GALERÍA
+        ======================================== */
+
+        .project-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .gallery-image {
+            overflow: hidden;
+            background: #eeeeee;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        /* ========================================
+           GALERÍA DOBLE
+        ======================================== */
+
+        .gallery-double {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-double .gallery-image {
+            aspect-ratio: 4 / 3;
+        }
+
+        .gallery-double .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* ========================================
+           NAVEGACIÓN ENTRE PROYECTOS
+        ======================================== */
+
+        .project-navigation {
+            border-top: 1px solid #dddddd;
+            margin-top: 150px;
+            padding: 35px 0 130px;
+        }
+
+        .project-navigation-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .project-navigation a {
+            border-bottom: 1px solid #111111;
+            padding-bottom: 4px;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-navigation a:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            border-top: 1px solid #dddddd;
+            padding: 30px 0;
+            font-size: 13px;
+            color: #666666;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media (max-width: 900px) {
+
+            .project-intro-inner,
+            .project-text {
+                margin-left: 0;
+            }
+
+            .project-title {
+                font-size: clamp(55px, 10vw, 90px);
+            }
+
+        }
+
+
+        /* ========================================
+           CELULAR
+        ======================================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 30px);
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            nav {
+                gap: 15px;
+                font-size: 13px;
+                margin-right: 0;
+            }
+
+
+            /* INTRO */
+
+            .project-intro {
+                padding: 80px 0 70px;
+            }
+
+            .project-intro-inner {
+                margin-left: 0;
+            }
+
+            .project-number {
+                margin-bottom: 40px;
+            }
+
+            .project-title {
+                font-size: 58px;
+                letter-spacing: -4px;
+                line-height: 0.92;
+                margin-bottom: 30px;
+            }
+
+            .project-category {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+
+            .project-description {
+                font-size: 16px;
+            }
+
+
+            /* IMAGEN PRINCIPAL */
+
+            .project-hero {
+                margin-bottom: 80px;
+            }
+
+            .project-hero-image {
+                aspect-ratio: 4 / 3;
+            }
+
+
+            /* TEXTO */
+
+            .project-text {
+                margin-left: 0;
+                margin-bottom: 80px;
+            }
+
+            .project-text-label {
+                margin-bottom: 25px;
+            }
+
+            .project-text p {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+
+            /* GALERÍA */
+
+            .project-gallery {
+                gap: 10px;
+            }
+
+            .gallery-double {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+
+            /* NAVEGACIÓN */
+
+            .project-navigation {
+                margin-top: 90px;
+                padding: 25px 0 90px;
+            }
+
+            .project-navigation-inner {
+                font-size: 14px;
+            }
+
+
+            /* FOOTER */
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <div class="container">
+
+            <div class="header-inner">
+
+                <nav>
+                    <a href="../index.html#proyectos">Proyectos</a>
+                    <a href="../index.html#sobre-mi">Sobre mí</a>
+                    <a href="../index.html#contacto">Contacto</a>
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         PROYECTO
+    ========================================= -->
+
+    <main>
+
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="project-intro">
+
+            <div class="container">
+
+                <div class="project-intro-inner">
+
+                    <p class="project-number">
+                        01 / 06
+                    </p>
+
+                    <h1 class="project-title">
+                        Soda<br>
+                        D'Anna
+                    </h1>
+
+                    <p class="project-category">
+                        Identidad visual · Branding · Packaging
+                    </p>
+
+                    <p class="project-description">
+                        Rediseño integral de identidad para una empresa
+                        dedicada a la elaboración y comercialización de
+                        bebidas. El proyecto comprendió la evolución de
+                        la marca, la construcción de un sistema visual y
+                        su aplicación en distintas líneas de productos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <section class="project-hero">
+
+            <div class="container">
+
+                <div class="project-hero-image">
+
+                    <img
+                        src="../img/proyectos/soda-danna/hero.jpg"
+                        alt="Soda D'Anna — Identidad visual"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SOBRE EL PROYECTO -->
+
+        <section class="project-text">
+
+            <div class="container">
+
+                <p class="project-text-label">
+                    El proyecto
+                </p>
+
+                <p>
+                    Una revisión de la identidad existente permitió construir un lenguaje
+    visual más contemporáneo, reconocible y consistente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GALERÍA -->
+
+        <section class="project-gallery">
+
+            <div class="container">
+
+                <div class="gallery-image">
+
+                    <img
+                        src="../img/proyectos/soda-danna/01.jpg"
+                        alt="Soda D'Anna — Aplicación de identidad"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="container">
+
+                <div class="gallery-double">
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="../img/proyectos/soda-danna/02.jpg"
+                            alt="Soda D'Anna — Packaging"
+                        >
+
+                    </div>
+
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="../img/proyectos/soda-danna/03.jpg"
+                            alt="Soda D'Anna — Sistema visual"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NAVEGACIÓN -->
+
+        <section class="project-navigation">
+
+            <div class="container">
+
+                <div class="project-navigation-inner">
+
+                    <a href="../index.html#proyectos">
+                        ← Proyectos
+                    </a>
+
+                    <a href="genuina.html">
+                        Genuina →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <span>
+                    Josué Janavel
+                </span>
+
+                <span>
+                    Diseñador Gráfico · San Juan, Argentina
+                </span>
+
+                <span>
+                    © 2026
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
