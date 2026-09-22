@@ -93,7 +93,7 @@
         ======================================== */
 
         .project-intro {
-            padding: 110px 0 100px;
+            padding: 110px 0 50px;
         }
 
         .project-intro-inner {
@@ -168,9 +168,9 @@
         }
 
         .project-text p {
-    font-size: clamp(21px, 2.2vw, 30px);
-    line-height: 1.3;
-    letter-spacing: -0.5px;
+            font-size: clamp(21px, 2.2vw, 30px);
+            line-height: 1.3;
+            letter-spacing: -0.5px;
         }
 
 
@@ -289,6 +289,9 @@
                 width: calc(100% - 30px);
             }
 
+
+            /* HEADER */
+
             header {
                 padding: 20px 0;
             }
@@ -311,23 +314,25 @@
             }
 
             .project-number {
-                margin-bottom: 40px;
+                margin-bottom: 35px;
             }
 
             .project-title {
                 font-size: 58px;
                 letter-spacing: -4px;
                 line-height: 0.92;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
             }
 
             .project-category {
                 font-size: 18px;
                 line-height: 1.4;
+                margin-bottom: 22px;
             }
 
             .project-description {
                 font-size: 16px;
+                line-height: 1.5;
             }
 
 
@@ -338,7 +343,7 @@
             }
 
             .project-hero-image {
-                aspect-ratio: 4 / 3;
+                aspect-ratio: 3 / 4;
             }
 
 
@@ -354,10 +359,10 @@
             }
 
             .project-text p {
-    font-size: 22px;
-    letter-spacing: -0.5px;
-    line-height: 1.3;
-}
+                font-size: 22px;
+                letter-spacing: -0.5px;
+                line-height: 1.3;
+            }
 
 
             /* GALERÍA */
@@ -476,10 +481,21 @@
 
                 <div class="project-hero-image">
 
-                    <img
-                        src="../img/proyectos/soda-danna/hero.jpg"
-                        alt="Soda D'Anna — Identidad visual"
-                    >
+                    <picture>
+
+                        <!-- Imagen específica para celular -->
+                        <source
+                            media="(max-width: 600px)"
+                            srcset="../img/proyectos/soda-danna/hero-mobile.jpg"
+                        >
+
+                        <!-- Imagen para PC / tablet -->
+                        <img
+                            src="../img/proyectos/soda-danna/hero.jpg"
+                            alt="Soda D'Anna — Identidad visual"
+                        >
+
+                    </picture>
 
                 </div>
 
@@ -501,7 +517,7 @@
 
                 <p>
                     Una revisión de la identidad existente permitió construir un lenguaje
-    visual más contemporáneo, reconocible y consistente.
+                    visual más contemporáneo, reconocible y consistente.
                 </p>
 
             </div>
