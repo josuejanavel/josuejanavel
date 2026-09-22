@@ -375,6 +375,25 @@
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
+            @media (max-width: 600px) {
+
+    .gallery-single {
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+    }
+
+    .gallery-single picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery-single img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 
 
             /* NAVEGACIÓN */
@@ -534,10 +553,10 @@
 
                 <div class="gallery-image">
 
-                    <img
-                        src="../img/proyectos/soda-danna/01.jpg"
-                        alt="Soda D'Anna — Aplicación de identidad"
-                    >
+                    <picture>
+    <source media="(max-width: 600px)" srcset="../img/proyectos/soda-danna/01-mobile.jpg">
+    <img src="../img/proyectos/soda-danna/01.jpg" alt="Soda D'Anna">
+</picture>
 
                 </div>
 
