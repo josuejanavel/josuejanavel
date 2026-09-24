@@ -1,21 +1,753 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genuina — Josué Janavel</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111;line-height:1.4}.container{width:calc(100% - 40px);max-width:1840px;margin:0 auto}header{padding:25px 0}nav{display:flex;justify-content:center;gap:40px;font-size:14px;margin-right:12%}nav a{color:#111;text-decoration:none;transition:opacity .2s}nav a:hover{opacity:.5}.project-intro{min-height:65vh;padding:80px 0 100px;margin-left:12%;display:flex;flex-direction:column;justify-content:center}.project-number{font-size:14px;color:#666;margin-bottom:35px}.project-title{font-size:clamp(58px,8vw,120px);font-weight:500;letter-spacing:-6px;line-height:.9;max-width:1000px}.project-category{font-size:15px;margin-top:40px}.project-description{font-size:17px;color:#666;max-width:650px;margin-top:18px}.project-hero{width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:120px}.project-hero img,.project-gallery img{width:100%;height:100%;object-fit:cover;display:block}.project-text{margin-left:12%;max-width:850px;margin-bottom:120px}.project-text-label{font-size:14px;color:#666;margin-bottom:30px}.project-text p:not(.project-text-label){font-size:clamp(21px,2.2vw,30px);line-height:1.3;letter-spacing:-.5px}.project-gallery{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:140px}.gallery-full{grid-column:1/-1;aspect-ratio:4/3;overflow:hidden}.gallery-half{aspect-ratio:4/3;overflow:hidden}.project-nav{border-top:1px solid #111;padding:35px 0 100px;display:flex;justify-content:space-between;font-size:15px}.project-nav a{color:#111;text-decoration:none}.project-nav a:hover{opacity:.5}footer{border-top:1px solid #111;padding:30px 0;font-size:13px;color:#666;display:flex;justify-content:space-between}.footer-name{color:#111}@media(max-width:700px){.container{width:calc(100% - 30px)}header{padding:20px 0}nav{gap:22px;margin-right:0}.project-intro{margin-left:0;min-height:70vh;padding:70px 0 80px}.project-title{font-size:56px;letter-spacing:-3px}.project-number{margin-bottom:25px}.project-category{margin-top:30px}.project-description{font-size:15px}.project-hero{aspect-ratio:4/3;margin-bottom:80px}.project-text{margin-left:0;margin-bottom:80px}.project-text-label{margin-bottom:25px}.project-text p:not(.project-text-label){font-size:22px;letter-spacing:-.5px;line-height:1.3}.project-gallery{grid-template-columns:1fr;gap:12px;margin-bottom:90px}.gallery-half{aspect-ratio:4/3}.project-nav{padding:25px 0 80px}footer{flex-direction:column;gap:8px}}
-</style>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Genuina — Josué Janavel</title>
+
+    <meta
+        name="description"
+        content="Genuina — Desarrollo de identidad visual y packaging por Josué Janavel."
+    >
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.4;
+        }
+
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+
+        /* ========================================
+           CONTENEDOR GENERAL
+        ======================================== */
+
+        .container {
+            width: calc(100% - 40px);
+            max-width: 1840px;
+            margin: 0 auto;
+        }
+
+
+
+        /* ========================================
+           HEADER
+        ======================================== */
+
+        header {
+            padding: 25px 0;
+        }
+
+
+        .header-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 40px;
+            font-size: 14px;
+            margin-right: 12%;
+        }
+
+
+        nav a {
+            transition: opacity 0.3s ease;
+        }
+
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+
+
+        /* ========================================
+           PROYECTO — INTRODUCCIÓN
+        ======================================== */
+
+        .project-intro {
+            padding: 110px 0 50px;
+        }
+
+
+        .project-intro-inner {
+            margin-left: 12%;
+            max-width: 900px;
+        }
+
+
+        .project-number {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 55px;
+        }
+
+
+        .project-title {
+            font-size: clamp(55px, 8vw, 120px);
+            font-weight: 500;
+            letter-spacing: -6px;
+            line-height: 0.9;
+            margin-bottom: 35px;
+        }
+
+
+        .project-category {
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            margin-bottom: 28px;
+        }
+
+
+        .project-description {
+            max-width: 650px;
+            font-size: 17px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+
+
+        /* ========================================
+           IMAGEN PRINCIPAL
+        ======================================== */
+
+        .project-hero {
+            margin-bottom: 130px;
+        }
+
+
+        .project-hero-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #eeeeee;
+        }
+
+
+        .project-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        /* ========================================
+           TEXTO DEL PROYECTO
+        ======================================== */
+
+        .project-text {
+            margin-left: 12%;
+            max-width: 850px;
+            margin-bottom: 120px;
+        }
+
+
+        .project-text-label {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+
+
+        .project-text p {
+            font-size: clamp(21px, 2.2vw, 30px);
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+
+
+        /* ========================================
+           GALERÍA
+        ======================================== */
+
+        .project-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+
+        .gallery-image {
+            overflow: hidden;
+            background: #eeeeee;
+        }
+
+
+        .gallery-image img {
+            width: 100%;
+            height: auto;
+        }
+
+
+
+        /* ========================================
+           GALERÍA DOBLE
+        ======================================== */
+
+        .gallery-double {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+
+        .gallery-double .gallery-image {
+            aspect-ratio: 4 / 3;
+        }
+
+
+        .gallery-double .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        /* ========================================
+           NAVEGACIÓN ENTRE PROYECTOS
+        ======================================== */
+
+        .project-navigation {
+            border-top: 1px solid #dddddd;
+            margin-top: 150px;
+            padding: 35px 0 130px;
+        }
+
+
+        .project-navigation-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+
+
+        .project-navigation a {
+            border-bottom: 1px solid #111111;
+            padding-bottom: 4px;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .project-navigation a:hover {
+            opacity: 0.5;
+        }
+
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            border-top: 1px solid #dddddd;
+            padding: 30px 0;
+            font-size: 13px;
+            color: #666666;
+        }
+
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media (max-width: 900px) {
+
+            .project-intro-inner,
+            .project-text {
+                margin-left: 0;
+            }
+
+
+            .project-title {
+                font-size: clamp(55px, 10vw, 90px);
+            }
+
+        }
+
+
+
+        /* ========================================
+           CELULAR
+        ======================================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: calc(100% - 30px);
+            }
+
+
+
+            /* HEADER */
+
+            header {
+                padding: 20px 0;
+            }
+
+
+            nav {
+                gap: 15px;
+                font-size: 13px;
+                margin-right: 0;
+            }
+
+
+
+            /* INTRO */
+
+            .project-intro {
+                padding: 60px 0 30px;
+            }
+
+
+            .project-intro-inner {
+                margin-left: 0;
+            }
+
+
+            .project-number {
+                margin-bottom: 35px;
+            }
+
+
+            .project-title {
+                font-size: 58px;
+                letter-spacing: -4px;
+                line-height: 0.92;
+                margin-bottom: 25px;
+            }
+
+
+            .project-category {
+                font-size: 18px;
+                line-height: 1.4;
+                margin-bottom: 22px;
+            }
+
+
+            .project-description {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+
+
+            /* IMAGEN PRINCIPAL */
+
+            .project-hero {
+                margin-bottom: 80px;
+            }
+
+
+            .project-hero-image {
+                aspect-ratio: 3 / 4;
+            }
+
+
+
+            /* TEXTO */
+
+            .project-text {
+                margin-left: 0;
+                margin-bottom: 80px;
+            }
+
+
+            .project-text-label {
+                margin-bottom: 25px;
+            }
+
+
+            .project-text p {
+                font-size: 22px;
+                letter-spacing: -0.5px;
+                line-height: 1.3;
+            }
+
+
+
+            /* GALERÍA */
+
+            .project-gallery {
+                gap: 10px;
+            }
+
+
+            .gallery-double {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+
+            .gallery-single {
+                aspect-ratio: 4 / 5;
+                overflow: hidden;
+            }
+
+
+            .gallery-single picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+
+            .gallery-single img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+
+
+            /* NAVEGACIÓN */
+
+            .project-navigation {
+                margin-top: 90px;
+                padding: 25px 0 90px;
+            }
+
+
+            .project-navigation-inner {
+                font-size: 14px;
+            }
+
+
+
+            /* FOOTER */
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<header><div class="container"><nav><a href="../index.html#proyectos">Proyectos</a><a href="../index.html#sobre-mi">Sobre mí</a><a href="../index.html#contacto">Contacto</a></nav></div></header>
-<main class="container">
-<section class="project-intro"><p class="project-number">02 / 06</p><h1 class="project-title">Genuina</h1><p class="project-category">Identidad visual · Branding · Packaging</p><p class="project-description">Desarrollo de identidad visual y packaging para una línea de cosmética natural.</p></section>
-<div class="project-hero"><img src="../img/proyectos/genuina/hero.jpg" alt="Genuina"></div>
-<section class="project-text"><p class="project-text-label">El proyecto</p><p>Una identidad visual pensada para comunicar el carácter natural de la marca y construir un sistema gráfico claro y consistente.</p></section>
-<section class="project-gallery"><div class="gallery-full"><img src="../img/proyectos/genuina/01.jpg" alt="Genuina — identidad visual"></div><div class="gallery-half"><img src="../img/proyectos/genuina/02.jpg" alt="Genuina — packaging"></div><div class="gallery-half"><img src="../img/proyectos/genuina/03.jpg" alt="Genuina — aplicaciones"></div></section>
-<nav class="project-nav"><a href="soda-danna.html">← Soda D'Anna</a><a href="uisj.html">UISJ →</a></nav>
-</main>
-<footer><div class="container"><span class="footer-name">Josué Janavel</span><span>Diseñador Gráfico · San Juan, Argentina</span><span>© 2026</span></div></footer>
-</body></html>
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <div class="container">
+
+            <div class="header-inner">
+
+                <nav>
+
+                    <a href="../index.html#proyectos">
+                        Proyectos
+                    </a>
+
+                    <a href="../index.html#sobre-mi">
+                        Sobre mí
+                    </a>
+
+                    <a href="../index.html#contacto">
+                        Contacto
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         PROYECTO
+    ========================================= -->
+
+    <main>
+
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="project-intro">
+
+            <div class="container">
+
+                <div class="project-intro-inner">
+
+                    <p class="project-number">
+                        02 / 06
+                    </p>
+
+
+                    <h1 class="project-title">
+                        Genuina
+                    </h1>
+
+
+                    <p class="project-category">
+                        Identidad visual · Branding · Packaging
+                    </p>
+
+
+                    <p class="project-description">
+                        Desarrollo de identidad visual y packaging para una
+                        línea de cosmética natural.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <section class="project-hero">
+
+            <div class="container">
+
+                <div class="project-hero-image">
+
+    <picture>
+
+        <!-- Imagen específica para celular -->
+        <source
+            media="(max-width: 600px)"
+            srcset="../img/proyectos/genuina/hero-mobile.jpg"
+        >
+
+        <!-- Imagen para PC / tablet -->
+        <img
+            src="../img/proyectos/genuina/hero.jpg"
+            alt="Genuina — Identidad visual"
+        >
+
+    </picture>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SOBRE EL PROYECTO -->
+
+        <section class="project-text">
+
+            <div class="container">
+
+                <p class="project-text-label">
+                    El proyecto
+                </p>
+
+
+                <p>
+                    Una identidad visual pensada para comunicar el carácter
+                    natural de la marca y construir un sistema gráfico claro
+                    y consistente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GALERÍA -->
+
+        <section class="project-gallery">
+
+
+            <!-- IMAGEN 01 -->
+
+            <div class="container">
+
+                <div class="gallery-image">
+
+    <picture>
+
+        <!-- Imagen específica para celular -->
+        <source
+            media="(max-width: 600px)"
+            srcset="../img/proyectos/genuina/01-mobile.jpg"
+        >
+
+        <!-- Imagen para PC / tablet -->
+        <img
+            src="../img/proyectos/genuina/01.jpg"
+            alt="Genuina — Identidad visual"
+        >
+
+    </picture>
+
+</div>
+
+            </div>
+
+
+
+            <!-- IMAGEN 02 + 03 -->
+
+            <div class="container">
+
+                <div class="gallery-double">
+
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="../img/proyectos/genuina/02.jpg"
+                            alt="Genuina — Packaging"
+                        >
+
+                    </div>
+
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="../img/proyectos/genuina/03.jpg"
+                            alt="Genuina — Aplicaciones"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- NAVEGACIÓN -->
+
+        <section class="project-navigation">
+
+            <div class="container">
+
+                <div class="project-navigation-inner">
+
+                    <a href="soda-danna.html">
+                        ← Soda D'Anna
+                    </a>
+
+
+                    <a href="uisj.html">
+                        UISJ →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <span>
+                    Josué Janavel
+                </span>
+
+
+                <span>
+                    Diseñador Gráfico · San Juan, Argentina
+                </span>
+
+
+                <span>
+                    © 2026
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
