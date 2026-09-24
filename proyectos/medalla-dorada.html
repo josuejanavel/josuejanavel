@@ -1,19 +1,579 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Medalla Dorada — Josué Janavel</title>
-<style>*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111;line-height:1.4}.container{width:calc(100% - 40px);max-width:1840px;margin:0 auto}header{padding:25px 0}nav{display:flex;justify-content:center;gap:40px;font-size:14px;margin-right:12%}nav a{color:#111;text-decoration:none;transition:opacity .2s}nav a:hover{opacity:.5}.project-intro{min-height:65vh;padding:80px 0 100px;margin-left:12%;display:flex;flex-direction:column;justify-content:center}.project-number{font-size:14px;color:#666;margin-bottom:35px}.project-title{font-size:clamp(58px,8vw,120px);font-weight:500;letter-spacing:-6px;line-height:.9;max-width:1000px}.project-category{font-size:15px;margin-top:40px}.project-description{font-size:17px;color:#666;max-width:650px;margin-top:18px}.project-hero{width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:120px}.project-hero img,.project-gallery img{width:100%;height:100%;object-fit:cover;display:block}.project-text{margin-left:12%;max-width:850px;margin-bottom:120px}.project-text-label{font-size:14px;color:#666;margin-bottom:30px}.project-text p:not(.project-text-label){font-size:clamp(21px,2.2vw,30px);line-height:1.3;letter-spacing:-.5px}.project-gallery{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:140px}.gallery-full{grid-column:1/-1;aspect-ratio:4/3;overflow:hidden}.gallery-half{aspect-ratio:4/3;overflow:hidden}.project-nav{border-top:1px solid #111;padding:35px 0 100px;display:flex;justify-content:space-between;font-size:15px}.project-nav a{color:#111;text-decoration:none}.project-nav a:hover{opacity:.5}footer{border-top:1px solid #111;padding:30px 0;font-size:13px;color:#666}footer .container{display:flex;justify-content:space-between}.footer-name{color:#111}@media(max-width:700px){.container{width:calc(100% - 30px)}header{padding:20px 0}nav{gap:22px;margin-right:0}.project-intro{margin-left:0;min-height:70vh;padding:70px 0 80px}.project-title{font-size:56px;letter-spacing:-3px}.project-number{margin-bottom:25px}.project-category{margin-top:30px}.project-description{font-size:15px}.project-hero{aspect-ratio:4/3;margin-bottom:80px}.project-text{margin-left:0;margin-bottom:80px}.project-text-label{margin-bottom:25px}.project-text p:not(.project-text-label){font-size:22px;letter-spacing:-.5px;line-height:1.3}.project-gallery{grid-template-columns:1fr;gap:12px;margin-bottom:90px}.gallery-half{aspect-ratio:4/3}.project-nav{padding:25px 0 80px}footer .container{flex-direction:column;gap:8px}}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Medalla Dorada — Josué Janavel</title>
+  <meta name="description" content="Medalla Dorada — Branding y diseño de etiquetas por Josué Janavel.">
+
+  <style>
+
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #000;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       CONTENEDOR
+    ========================= */
+
+    .container {
+      width: calc(100% - 40px);
+      max-width: 1840px;
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      padding: 25px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-right: 12%;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+
+    /* =========================
+       INTRO DEL PROYECTO
+    ========================= */
+
+    .project-intro {
+      padding: 110px 0 50px;
+    }
+
+    .project-intro-inner {
+      margin-left: 12%;
+      max-width: 900px;
+    }
+
+    .project-number {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 55px;
+    }
+
+    .project-title {
+      font-size: clamp(55px, 8vw, 120px);
+      font-weight: 500;
+      letter-spacing: -6px;
+      line-height: 0.9;
+      margin-bottom: 35px;
+    }
+
+    .project-category {
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+
+    .project-description {
+      font-size: 17px;
+      line-height: 1.5;
+      color: #777;
+      max-width: 650px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .project-hero {
+      margin-bottom: 130px;
+    }
+
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .project-hero-image picture,
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-hero-image img {
+      object-fit: cover;
+    }
+
+
+    /* =========================
+       TEXTO DEL PROYECTO
+    ========================= */
+
+    .project-text {
+      margin-left: 12%;
+      max-width: 850px;
+      margin-bottom: 120px;
+    }
+
+    .project-text-label {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 35px;
+    }
+
+    .project-text p {
+      font-size: clamp(21px, 2.2vw, 30px);
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+    }
+
+
+    /* =========================
+       GALERÍA
+    ========================= */
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .gallery-single {
+      width: 100%;
+    }
+
+    .gallery-double {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-image {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .gallery-image picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-double .gallery-image {
+      aspect-ratio: 4 / 3;
+    }
+
+
+    /* =========================
+       NAVEGACIÓN ENTRE PROYECTOS
+    ========================= */
+
+    .project-navigation {
+      border-top: 1px solid #000;
+      margin-top: 150px;
+      padding: 35px 0 130px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-navigation a {
+      font-size: 16px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 4px;
+      transition: opacity 0.2s ease;
+    }
+
+    .project-navigation a:hover {
+      opacity: 0.5;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid #000;
+      padding: 30px 0;
+      font-size: 13px;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .project-intro-inner,
+      .project-text {
+        margin-left: 0;
+      }
+
+      .project-title {
+        font-size: clamp(55px, 10vw, 90px);
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: calc(100% - 30px);
+      }
+
+
+      /* Header */
+
+      header {
+        padding: 20px 0;
+      }
+
+      nav {
+        gap: 15px;
+        margin-right: 0;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+
+      /* Intro */
+
+      .project-intro {
+        padding: 60px 0 30px;
+      }
+
+      .project-number {
+        margin-bottom: 35px;
+      }
+
+      .project-title {
+        font-size: 58px;
+        letter-spacing: -4px;
+        line-height: 0.92;
+        margin-bottom: 25px;
+      }
+
+      .project-category {
+        font-size: 18px;
+      }
+
+      .project-description {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+
+      /* Hero */
+
+      .project-hero {
+        margin-bottom: 80px;
+      }
+
+      .project-hero-image {
+        aspect-ratio: 3 / 4;
+      }
+
+
+      /* Texto */
+
+      .project-text {
+        margin-bottom: 80px;
+      }
+
+      .project-text-label {
+        margin-bottom: 25px;
+      }
+
+      .project-text p {
+        font-size: 22px;
+        line-height: 1.3;
+      }
+
+
+      /* Galería */
+
+      .gallery {
+        gap: 10px;
+      }
+
+      .gallery-double {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .gallery-single {
+        aspect-ratio: 4 / 5;
+      }
+
+
+      /* Navegación */
+
+      .project-navigation {
+        margin-top: 90px;
+        padding: 25px 0 90px;
+      }
+
+      .project-navigation a {
+        font-size: 14px;
+      }
+
+
+      /* Footer */
+
+      footer {
+        padding: 25px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        line-height: 1.4;
+      }
+
+    }
+
+  </style>
 </head>
+
+
 <body>
-<header><div class="container"><nav><a href="../index.html#proyectos">Proyectos</a><a href="../index.html#sobre-mi">Sobre mí</a><a href="../index.html#contacto">Contacto</a></nav></div></header>
-<main class="container">
-<section class="project-intro"><p class="project-number">04 / 06</p><h1 class="project-title">Medalla Dorada</h1><p class="project-category">Branding · Packaging · Diseño de etiquetas</p><p class="project-description">Branding y diseño de etiquetas para una cerveza artesanal de San Juan.</p></section>
-<div class="project-hero"><img src="../img/proyectos/medalla-dorada/hero.jpg" alt="Medalla Dorada"></div>
-<section class="project-text"><p class="project-text-label">El proyecto</p><p>El proyecto desarrolla una identidad visual aplicada a etiquetas, buscando construir una presencia de marca reconocible y coherente en el punto de venta.</p></section>
-<section class="project-gallery"><div class="gallery-full"><img src="../img/proyectos/medalla-dorada/01.jpg" alt="Medalla Dorada — proyecto"></div><div class="gallery-half"><img src="../img/proyectos/medalla-dorada/02.jpg" alt="Medalla Dorada — aplicación"></div><div class="gallery-half"><img src="../img/proyectos/medalla-dorada/03.jpg" alt="Medalla Dorada — detalles"></div></section>
-<nav class="project-nav"><a href="uisj.html">← UISJ</a><a href="alua.html">Alua →</a></nav>
-</main>
-<footer><div class="container"><span class="footer-name">Josué Janavel</span><span>Diseñador Gráfico · San Juan, Argentina</span><span>© 2026</span></div></footer>
-</body></html>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="../index.html">Proyectos</a>
+        <a href="../sobre-mi.html">Sobre mí</a>
+        <a href="../contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- INTRO -->
+
+  <main>
+
+    <section class="project-intro">
+      <div class="container">
+        <div class="project-intro-inner">
+
+          <div class="project-number">
+            04 / 06
+          </div>
+
+          <h1 class="project-title">
+            Medalla<br>Dorada
+          </h1>
+
+          <div class="project-category">
+            Branding · Packaging · Diseño de etiquetas
+          </div>
+
+          <p class="project-description">
+            Branding y diseño de etiquetas para una cerveza artesanal de San Juan.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HERO -->
+
+    <section class="project-hero">
+      <div class="container">
+
+        <div class="project-hero-image">
+
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="../img/proyectos/medalla-dorada/hero-mobile.jpg"
+            >
+
+            <img
+              src="../img/proyectos/medalla-dorada/hero.jpg"
+              alt="Medalla Dorada — Branding y packaging"
+            >
+          </picture>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TEXTO -->
+
+    <section class="project-text">
+      <div class="container">
+
+        <div class="project-text-label">
+          El proyecto
+        </div>
+
+        <p>
+          El proyecto desarrolla una identidad visual aplicada a etiquetas, buscando construir una presencia de marca reconocible y coherente en el punto de venta.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- GALERÍA -->
+
+    <section class="gallery">
+      <div class="container">
+
+        <!-- IMAGEN 01 -->
+
+        <div class="gallery-single">
+
+          <div class="gallery-image">
+
+            <picture>
+              <source
+                media="(max-width: 600px)"
+                srcset="../img/proyectos/medalla-dorada/01-mobile.jpg"
+              >
+
+              <img
+                src="../img/proyectos/medalla-dorada/01.jpg"
+                alt="Medalla Dorada — proyecto"
+              >
+            </picture>
+
+          </div>
+
+        </div>
+
+
+        <!-- IMÁGENES 02 + 03 -->
+
+        <div class="gallery-double">
+
+          <div class="gallery-image">
+            <img
+              src="../img/proyectos/medalla-dorada/02.jpg"
+              alt="Medalla Dorada — aplicación"
+            >
+          </div>
+
+          <div class="gallery-image">
+            <img
+              src="../img/proyectos/medalla-dorada/03.jpg"
+              alt="Medalla Dorada — detalles"
+            >
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <div class="container">
+
+      <div class="project-navigation">
+
+        <a href="uisj.html">
+          ← UISJ
+        </a>
+
+        <a href="alua.html">
+          Alua →
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <div class="container">
+
+    <footer>
+
+      <div>
+        Josué Janavel
+      </div>
+
+      <div>
+        Diseñador Gráfico · San Juan, Argentina
+      </div>
+
+      <div>
+        © 2026
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
